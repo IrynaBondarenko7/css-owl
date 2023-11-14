@@ -1,9 +1,13 @@
+body {
+  background-color: #87ceeb;
+}
 .owl {
   position: relative;
   top: 10%;
   margin: auto;
   height: 300px;
   width: 300px;
+  margin-top: 100px;
 }
 
 .head {
@@ -281,6 +285,7 @@
 .wings .right {
   right: 28%;
   transform: rotate(-45deg);
+  animation: flapAnimation 3s ease-in-out infinite;
 }
 
 .stomach-bottom::after,
@@ -338,4 +343,46 @@
   content: "";
   top: -2px;
   right: -20px;
+}
+
+@keyframes flapAnimation {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(-95deg);
+  }
+}
+
+/*--------------------Speech---------------------------------*/
+.speech-bubble {
+  background: #fff;
+  color: #333;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 4em;
+  margin-bottom: 1em;
+  padding: 0 1em;
+  position: absolute;
+  text-align: center;
+  vertical-align: top;
+  min-width: 7em;
+  right: -50px;
+  top: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.speech-bubble:after {
+  border: 1em solid transparent;
+  border-top-color: #fff;
+  content: "";
+  margin-left: -1em;
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  width: 0;
+  height: 0;
 }
